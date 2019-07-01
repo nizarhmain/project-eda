@@ -1,0 +1,28 @@
+docker network create somenetwork
+
+docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.1.0
+
+// check the cluster health
+curl -X GET "localhost:9200/_cat/health?v"
+
+// create an index
+curl -X PUT "localhost:9200/customer?pretty"
+curl -X GET "localhost:9200/_cat/indices?v"
+
+// add a new customer in our case we will need to loop through all the csv file and execute a put on every line
+
+curl -X PUT "localhost:9200/customer/_doc/1?pretty" -H 'Content-Type: application/json' -d'
+{
+  "name": "John Doe"
+}
+
+we first need to convert the csv into json and then push it to elasticsearch with a bunch of post requests
+
+// start kibana
+docker run -d --name kibana --net somenetwork -p 5601:5601 kibana:7.1.0
+
+
+
+
+
+
