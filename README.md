@@ -100,7 +100,7 @@ An more complex time serie, showing the electric power usage and the rms_current
 ![GitHub Logo](screenshots/Screenshot&#32;at&#32;17-58-49.png)
 
 
-## Machine learning
+# Machine learning
 
 The Elastic Stack is brilliant at quickly answering questions such as, "what are the hourly requests per second over the last week?" and visualizing results in real time. But what if you want to dig deeper and ask "is there something unusual going on?" and "what's causing this?"
 
@@ -124,9 +124,28 @@ We can also see that the all the parameters for the scheduled jobs have a very c
 
 ![GitHub Logo](screenshots/Screenshot&#32;at&#32;18-14-11.png)
 
-Forecasting anomalies after one day
+Detecting anomalies after one day
 
-![GitHub Logo](screenshots/)
+![GitHub Logo](screenshots/Screenshot&#32;at&#32;18-17-35.png)
+
+![GitHub Logo](screenshots/Screenshot&#32;at&#32;18-18-05.png)
+
+![GitHub Logo](screenshots/Screenshot&#32;at&#32;18-17-55.png)
+
+We can see that during certain times, there are some unexpected peaks.
+
+By clicking on the forecast button, we can predict future anomalies
+
+## One day Forecast
+
+![GitHub Logo](screenshots/Screenshot&#32;at&#32;18-18-38.png)
+
+## One weey Forecast
+
+![GitHub Logo](screenshots/Screenshot&#32;at&#32;18-20-35.png)
+
+The same method would be applied to all other readings for all the other sensors.
+
 
 
 
